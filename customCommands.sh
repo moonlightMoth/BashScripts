@@ -23,7 +23,12 @@ function gitpush()
 {
 	if ! [ $# -eq 0 ]
 	then
-		git commit -a -m $1; git push;
+		git commit -a -m $1
+
+		if [ $? -eq 0 ]
+		then
+			git push
+		fi
 	else
 		echo 'Error: commit message not specified'
 	fi
