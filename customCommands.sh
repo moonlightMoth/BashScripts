@@ -31,7 +31,7 @@ function gitpush()
 
 	if ! [ $# -eq 0 ]
 	then
-		git commit -a -m $1
+		git commit -a -m '$1'
 
 		if [ $? -eq 0 ]
 		then
@@ -50,5 +50,5 @@ function gitpush()
 
 saas()
 {
-	echo 'this cmd temporary does nothing, but i\'ll make it fun or smth '
+	echo 'this cmd temporary does nothing, but i will make it fun or smth '
 }
