@@ -35,15 +35,20 @@ function gitpush()
 
 		if [ $? -eq 0 ]
 		then
-			git push
+			git push;
+			return 0
 		fi
+
+		return 1
 	else
 		echo 'Error: commit message not specified';
 		return 1
 	fi
+
+	return 1
 }
 
-testsaas()
+saas()
 {
-	echo $#
+	echo 'this cmd temporary does nothing, but i\'ll make it fun or smth '
 }
