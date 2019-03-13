@@ -25,13 +25,13 @@ function gitpush()
 {
 	if [ $# -gt 1 ]
 	then
-		echo 'Erroe: requires only one argument - commit message';
+		echo 'Error: gitpush requires only one argument - commit message';
 		return 1
 	fi
 
 	if ! [ $# -eq 0 ]
 	then
-		git commit -a -m '\\''$1'\\''
+		git commit -a -m "$1"
 
 		if [ $? -eq 0 ]
 		then
