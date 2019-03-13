@@ -42,3 +42,8 @@ function gitpush()
 		return 1
 	fi
 }
+
+testsaas()
+{
+	echo $#
+}
