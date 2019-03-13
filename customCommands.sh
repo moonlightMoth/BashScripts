@@ -17,3 +17,14 @@ function blyad()
 {
 	echo 'Calm down, everything ok, keep trying'
 }
+
+# commits all changes to git with specified message and pushes to remote
+function gitpush()
+{
+	if [ -n $1 ]
+	then
+		git commit -a -m $1; git push;
+	else
+		echo 'Error: commit message not specified'
+	fi
+}
