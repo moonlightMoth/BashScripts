@@ -21,7 +21,7 @@ function blyad()
 # commits all changes to git with specified message and pushes to remote
 function gitpush()
 {
-	if [ -n $1 ]
+	if ! [ $# -eq 0 ]
 	then
 		git commit -a -m $1; git push;
 	else
