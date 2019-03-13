@@ -15,5 +15,5 @@ function olink()
 # kek
 function blyad()
 {
-	echo 'Calm down, everything ok, continiue trying'
+	echo 'Calm down, everything ok, keep trying'
 }
