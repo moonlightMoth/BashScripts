@@ -31,9 +31,9 @@ function gitpush()
 
 	if ! [ $# -eq 0 ]
 	then
-		git commit -a -m "$1"
 
-		if [ $? -eq 0 ]
+
+		if git commit -a -m "$1"
 		then
 			git push;
 			return 0
