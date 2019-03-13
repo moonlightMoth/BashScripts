@@ -31,7 +31,7 @@ function gitpush()
 
 	if ! [ $# -eq 0 ]
 	then
-		git commit -a -m '$1'
+		git commit -a -m '\\''$1'\\''
 
 		if [ $? -eq 0 ]
 		then
