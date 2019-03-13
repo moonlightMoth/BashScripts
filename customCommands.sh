@@ -48,6 +48,7 @@ function gitpush()
 	return 1
 }
 
+# ummm
 saas()
 {
 	echo 'this cmd temporary does nothing, but i will make it fun or smth '
