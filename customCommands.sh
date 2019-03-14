@@ -14,7 +14,7 @@ function olink()
 }
 
 # kek
-function blyad()
+function blead()
 {
 	echo 'Calm down, everything ok, keep trying'
 	return 0;
