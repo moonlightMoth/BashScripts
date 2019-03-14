@@ -73,6 +73,11 @@ tygdig()
 	done
 }
 
+suus()
+{
+	sudo apt-get install $1
+}
+
 # ummm
 saas()
 {
