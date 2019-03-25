@@ -50,6 +50,7 @@ function gitpush()
 
 tygdig()
 {
+
 	for i in {1..1000};
 	do
 		sleep 0.25;
@@ -59,9 +60,16 @@ tygdig()
 			echo -n -e "\t|" ;
 		done;
 
-		if [ $[$i % 19] -ne 0 ]
+		if [[ $[$i % 19] -ne 0 ]]
 		then
-			echo -n "тыг-дык|"
+
+			if [[ $[$i % 3] -eq 0 ]] && [[ $1 = puf ]]
+		    then
+			    echo -n "пуф))))|"
+			else
+			    echo -n "тыг-дык|"
+			fi
+
 		fi
 
 		for k in $(seq 1 $[19 - $i % 19]);
@@ -75,7 +83,7 @@ tygdig()
 
 suus()
 {
-	sudo apt-get install $1
+	sudo apt-get install "$1"
 }
 
 # ummm
@@ -83,3 +91,16 @@ saas()
 {
 	echo 'this cmd temporary does nothing, but i will make it fun or smth '
 }
+
+ept()
+{
+	echo -n "ept " >> ~/ept.count
+	return 0
+}
+
+isept()
+{
+	cat ~/ept.count
+	return 0
+}
+
