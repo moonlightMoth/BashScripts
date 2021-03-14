@@ -50,17 +50,16 @@ function gitpush()
 
 tygdig()
 {
-
 	for i in {1..1000};
 	do
 		sleep 0.25;
 
-		for j in $(seq 1 $[$i % 19]);
+		for j in $(seq 1 $[$i % 20]);
 		do
 			echo -n -e "\t|" ;
 		done;
 
-		if [[ $[$i % 19] -ne 0 ]]
+		if [[ $[$i % 20] -ne 0 ]]
 		then
 
 			if [[ $[$i % 3] -eq 0 ]] && [[ $1 = puf ]]
@@ -69,15 +68,45 @@ tygdig()
 			else
 			    echo -n "тыг-дык|"
 			fi
+		else
+			echo -n -e "\t|"
 
 		fi
 
-		for k in $(seq 1 $[19 - $i % 19]);
+		for k in $(seq 1 $[20 - $i % 20]);
 		do
 			echo -e -n "\t|";
 		done;
 
 		echo -e -n "\n";
+
+
+
+		for k in $(seq 1 $[20 - $i % 20]);
+		do
+			echo -e -n "\t|";
+		done;
+
+		if [[ $[$i % 20] -ne 0 ]]
+		then
+
+			if [[ $[$i % 3] -eq 0 ]] && [[ $1 = puf ]]
+		    then
+			    echo -n "пуф))))|"
+			else
+			    echo -n "тыг-дык|"
+			fi
+		else
+			echo -n -e "\t|"
+		fi
+
+		for j in $(seq 1 $[$i % 20]);
+		do
+			echo -n -e "\t|" ;
+		done;
+
+
+	    echo -e -n "\n";
 	done
 }
 
@@ -104,3 +133,14 @@ isept()
 	return 0
 }
 
+domru()
+{
+	$(xdotool getactivewindow windowmove 0 0)
+    $(gnome-terminal --geometry=-0+0 -- ping ya.ru -s 1024)
+
+    for k in $(seq 1 20);
+	do
+		speedtest
+	done;
+
+}
